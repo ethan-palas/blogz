@@ -1,4 +1,6 @@
-<!DOCTYPE HTML>
+{% extends "base.html" %}
+
+{% block content %}
     <h1>View the Post</h1>
         <h2>Blog Title</h2>
         
@@ -7,3 +9,7 @@
         <h2>Blog Post</h2>
         
         <p>{{blog.body}}</p>
+    
+        <p>Written by <a href="/blog?user={{blog.owner.id}}">{{blog.owner.username}}</a></p>
+        
+{% endblock %}

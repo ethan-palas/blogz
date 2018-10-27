@@ -6,10 +6,12 @@
 
         <ul>
             {% for test in blogs %}
-                <h2><a href = "./blog-post?id={{test.id}}"> {{test.title}} </a></h2>
+                <h2><a href = "/blog-post?id={{test.id}}"> {{test.title}} </a></h2>
 
                 <h3>{{test.body}}</h3>
+                <p>Written by <a href="/blog?user={{test.owner.id}}">{{test.owner.username}}</a></p>
             {% endfor %}
+
         </ul>
 
 {% endblock %}
